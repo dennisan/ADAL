@@ -34,7 +34,9 @@ namespace SingleTenantSignIn
         public static void RefreshValidationSettings()
         {
             string metadataLocation = ConfigurationManager.AppSettings["ida:FederationMetadataLocation"];
-            DatabaseIssuerNameRegistry.RefreshKeys(metadataLocation);
+            
+            // Use the InMemory IssuerNameRegistry
+            MemoryIssuerNameRegistry.RefreshKeys(metadataLocation);
         }
 
         public static void UpdateAudienceUri()

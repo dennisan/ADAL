@@ -143,6 +143,7 @@
     <Compile Include="Models\TenantRegistrationModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\DatabaseIssuerNameRegistry.cs" />
+    <Compile Include="Utils\MemoryIssuerNameRegistry.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
