@@ -14,19 +14,20 @@ namespace SingleTenantSignIn.Utils
     {
         public class TenantData
         {
-            private readonly List<IssuingAuthorityKey> issuingAuthorityKeys = new List<IssuingAuthorityKey>();
-            private readonly List<Tenant> tenants = new List<Tenant>();
+            private readonly List<IssuingAuthorityKey> _issuingAuthorityKeys = new List<IssuingAuthorityKey>();
+            private readonly List<Tenant> _tenants = new List<Tenant>();
 
             public List<IssuingAuthorityKey> IssuingAuthorityKeys
             {
-                get { return issuingAuthorityKeys; }
+                get { return _issuingAuthorityKeys; }
             }
 
             public List<Tenant> Tenants
             {
-                get { return tenants; }
+                get { return _tenants; }
             }
         }
+
         private static readonly TenantData Data= new TenantData();
         
         public static bool ContainsTenant(string tenantId)

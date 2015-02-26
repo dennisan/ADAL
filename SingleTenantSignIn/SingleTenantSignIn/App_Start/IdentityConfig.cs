@@ -35,7 +35,7 @@ namespace SingleTenantSignIn
         {
             string metadataLocation = ConfigurationManager.AppSettings["ida:FederationMetadataLocation"];
             
-            // Use the InMemory IssuerNameRegistry
+            //DatabaseIssuerNameRegistry.RefreshKeys(metadataLocation);
             MemoryIssuerNameRegistry.RefreshKeys(metadataLocation);
         }
 
